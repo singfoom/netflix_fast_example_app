@@ -20,6 +20,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'parallel_tests'
+  gem 'factory_bot_rails'
 end
 
 group :development do
