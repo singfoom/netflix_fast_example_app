@@ -28,6 +28,35 @@ describe FastBookSerializer do
         expect(book_json).to have_json_path('data/attributes')
       end
 
+      it 'includes data/attributes/publisher' do
+        expect(book_json)
+          .to have_json_path('data/attributes/publisher')
+      end
+
+      it 'includes data/attributes/created_at' do
+        expect(book_json)
+          .to have_json_path('data/attributes/created_at')
+      end
+
+      it 'includes data/attributes/genre' do
+        expect(book_json)
+          .to have_json_path('data/attributes/genre')
+      end
+
+      it 'includes data/attributes/published_at' do
+        expect(book_json)
+          .to have_json_path('data/attributes/published_at')
+      end
+
+      it 'includes data/attributes/title' do
+        expect(book_json)
+          .to have_json_path('data/attributes/title')
+      end
+
+      it 'includes data/attributes/updated_at' do
+        expect(book_json)
+          .to have_json_path('data/attributes/updated_at')
+      end
     end
   end
 end
