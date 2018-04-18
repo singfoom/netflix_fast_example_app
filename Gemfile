@@ -9,6 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'faker'
 gem 'fast_jsonapi'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'rspec-benchmark'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

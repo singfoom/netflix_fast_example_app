@@ -1,7 +1,8 @@
 require 'simplecov'
 SimpleCov.start
-
+require 'rspec-benchmark'
 RSpec.configure do |config|
+  config.include RSpec::Benchmark::Matchers
   config.before(:each) do
     SimpleCov.command_name "RSpec:#{Process.pid.to_s}#{ENV['TEST_ENV_NUMBER']}"
   end
