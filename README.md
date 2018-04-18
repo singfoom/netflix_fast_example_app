@@ -1,24 +1,7 @@
-# README
+# netflix_fast_example_app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A repository for an examination of the performance difference between [ActiveModelSerializers](https://github.com/rails-api/active_model_serializers) and Netflix's [fast_jsonapi](https://github.com/Netflix/fast_jsonapi) for the JSON serialization layer.
 
-Things you may want to cover:
+Additionally, this is a test bed for me to understand how Netflix is using their fast_jsonapi serializers and [restful-jsonapi](https://github.com/Netflix/restful-jsonapi)
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
