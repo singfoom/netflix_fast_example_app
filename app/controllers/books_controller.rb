@@ -11,4 +11,14 @@ class BooksController < ApplicationController
                                                        :adapter => :json_api).to_json
   end
 
+  def show
+    book = Book.find(params[:id])
+    render :json => FastBookSerializer.new(book).serialized_json
+  end
+
+  def slow_show
+    book = Book.find(params[:id])
+    render :json => FastBookSerializer.new(book).serialized_json
+  end
+
 end
