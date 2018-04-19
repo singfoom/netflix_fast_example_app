@@ -76,4 +76,29 @@ RSpec.describe BooksController, type: :controller do
         expect(json_data.dig('attributes', 'title')).to eq(book.title)
       end
   end
+
+  context 'POST /books' do
+    let(:create_params) do
+      {
+        :data => {
+          :type => 'books',
+          :attributes => {
+            :title => 'The Wheel of Time',
+            :publisher => 'Tor',
+            :genre => 'Fantasy',
+            :published_at => Time.now,
+          }
+        }
+      }
+    end
+
+    it 'responds with a created status' do
+      post :create, :params => create_params, :as => :json
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'creates a new book' do
+      expect { post :create, :params => create_params, :as => :json }.to change { Book.count }.by(1)
+    end
+  end
 end

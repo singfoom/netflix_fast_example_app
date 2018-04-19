@@ -22,4 +22,24 @@ class BooksController < ApplicationController
                                                        :adapter => :json_api).to_json
   end
 
+  def create
+    book = Book.new(book_params)
+    if book.save
+      render :json => FastBookSerializer.new(book).serialized_json
+    else
+      render :json => {:error => "something"}
+    end
+  end
+
+  private
+
+  def book_params
+    restify_param(:book).require(:book).permit(
+      :title,
+      :publisher,
+      :genre,
+      :published_at
+    )
+  end
+
 end

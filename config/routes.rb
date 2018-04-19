@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   get 'books/slow', :to => 'books#slow_index', :format => 'json'
   get 'books/slow_show/:id', :to => 'books#slow_show', :format => 'json'
-  resources :books, :only => [:index, :show], :format => 'json'
+  resources :books, :only => [:index, :show, :create], :format => 'json'
 
 end
