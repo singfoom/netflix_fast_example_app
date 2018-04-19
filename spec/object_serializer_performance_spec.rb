@@ -12,11 +12,11 @@ describe FastJsonapi::ObjectSerializer, performance: true do
     context 'FastBookSerializer' do
 
       it 'creates a hash of 1000 records in less than 50 ms' do
-        expect { FastBookSerializer.new(created_books).serializable_hash }.to perform_under(100).ms
+        expect { FastBookSerializer.new(created_books).serializable_hash }.to perform_under(120).ms
       end
 
       it 'serialize 1000 records to jsonapi in less than 60 ms' do
-        expect { FastBookSerializer.new(created_books).serialized_json }.to perform_under(150).ms
+        expect { FastBookSerializer.new(created_books).serialized_json }.to perform_under(170).ms
       end
 
     end
