@@ -11,6 +11,8 @@ gem 'fast_jsonapi'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'rspec-benchmark'
 gem 'lograge'
+gem 'restful-jsonapi'
+gem 'oj'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -37,6 +39,7 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'database_cleaner'
 end
 
 
